@@ -13,104 +13,61 @@
     />
     <link rel="stylesheet" href="/main.css" />
   </head>
+
+
   <body>
+    <!-- App Wrapper -->
     <main class="app">
       <!-- Greeting -->
       <section class="greeting">
         <h2 class="title">
-          What's up, <input type="text" placeholder="Name here" id="name" />
+          What's up, <input type="text" id="name" placeholder="Name here" />
         </h2>
       </section>
-      <!-- EOG -->
-
-      <!-- Todo List -->
+      <!-- End of Greeting -->
+      
+      <!-- New Todo -->
       <section class="create-todo">
         <h3>CREATE A TODO</h3>
-
         <form id="new-todo-form">
-          <h4>What's on your ToDo list? 👀</h4>
-
-          <input
-            type="text"
+          <h4>What do you wanna do today?</h4>
+          <input 
+            type="text" 
             placeholder="e.g. Send Ej some money 🕺🏽"
-            id="title"
-            name="title"
-          />
-
-          <!-- title == content -->
-
+            name="content"
+            id="content" />
+          
           <h4>Pick a category</h4>
-
           <div class="options">
-            <!-- Business -->
             <label>
-              <input
-                type="radio"
-                id="category-1"
-                name="category"
-                value="business"
-              />
+              <input type="radio" name="category" id="category1" value="business" /> 
               <span class="bubble business"></span>
               <div>Business</div>
             </label>
-
-            <!-- Personal -->
             <label>
-              <input
-                type="radio"
-                id="category-2"
-                name="category"
-                value="personal"
-              />
+              <input type="radio" name="category" id="category2" value="personal" />
               <span class="bubble personal"></span>
               <div>Personal</div>
             </label>
           </div>
-
-          <input type="submit" value="Add ToDo" />
+  
+          <input type="submit" value="Add todo" />
         </form>
       </section>
-
+      <!-- End of New Todo -->
+  
+      <!-- Todo List -->
       <section class="todo-list">
         <h3>TODO LIST</h3>
-        <!-- todo 1 -->
-        <div class="list" id="todo-list">
-          <!-- <div class="todo-item ">
-            <label>
-              <input type="checkbox" />
-              <span class="bubble business"></span>
-            </label>
-
-            <div class="todo-content">
-              <input type="text" value="Send Ej some money 🕺🏽" readonly />
-            </div>
-
-            <div class="actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-            </div>
-          </div> -->
-        </div>
-        <!-- todo2  -->
-        <!-- <div class="list" id="todo-list">
-          <div class="todo-item">
-            <label>
-              <input type="checkbox" />
-              <span class="bubble personal"></span>
-            </label>
-
-            <div class="todo-content">
-              <input type="text" value="Do laundry" readonly />
-            </div>
-
-            <div class="actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-            </div>
-          </div>
-        </div> -->
+        <div class="list" id="todo-list"></div>
       </section>
+      <!-- End of Todo List -->
+  
     </main>
-    <script src="/main.js"></script>
+    <!-- End of App Wrapper -->
+  
+    <!-- JS Import -->
+    <script src="main.js"></script>
+    <!-- End of JS Import -->
   </body>
 </html>
